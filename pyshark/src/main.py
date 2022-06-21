@@ -17,14 +17,16 @@ print(json.dumps(data, indent=2))
 # Iteration in all packets of pcap file
 for packet in capturedFile:
     try:
-        print(packet)
         protocol = packet.transport_layer
         src_addr = packet.ip.src
         src_port = packet[protocol].srcport
         dst_addr = packet.ip.dst
         dst_port = packet[protocol].dstport
-        print(f"Src IP: {src_addr}:{src_port}\nDst IP: {dst_addr}:{dst_port}\nProtocol: {protocol} \n")
+
+        if protocol == "TCP":
+            print(
+                f"Src IP: {src_addr}:{src_port}\nDst IP: {dst_addr}:{dst_port}\nProtocol: {protocol} \n"
+            )
+
     except AttributeError:
         print("Something went wrong")
-
-

@@ -2,4 +2,4 @@
 	1. pip install virtualenv
 	2. virtualenv <name>
 	3. virtualenv -p <pythonpath> <name>
-	4. source <name>/bim/activate
+	4. source <name>/bin/activate

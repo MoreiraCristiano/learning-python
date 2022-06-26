@@ -6,7 +6,7 @@
 	3. __str__(self)		--> Optional method, usually used to pretty print an object (for reports)
 	4. 
 
-# Module __main__	
+# Module "__main__"
 	1. When load any module, python assigns a string with the modules names to a global attribute called __name__
 
 # Encapsulation	

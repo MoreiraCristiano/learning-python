@@ -1,7 +1,7 @@
 from decimal import Decimal
 
 
-class Account:
+class Account(object):
 	# Construtor
 	def __init__(self, name, balance):
 		if (balance < Decimal("0.00")):
@@ -35,4 +35,9 @@ class Account:
 		self._balance = balance
 	# def set_balance(self, balance):
 	# 	self._balance = balance
+
+	def __repr__(self):
+		return (f"Account(name={self.name}, balance={self._balance})")
+
+
 

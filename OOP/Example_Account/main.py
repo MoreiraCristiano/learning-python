@@ -8,4 +8,6 @@ account1.withdraw(Decimal("50.00"))
 
 account1.balance = Decimal("50.00")
 
+print(account1.__repr__())
 
+print(__name__)
